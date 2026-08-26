@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>백세종</title>
+  <desc>
+    파비콘 — 독의 마크와 같은 그림이다(측량 신호: 점 하나 위로 퍼지는 동심호).
+    사이트가 이미 쓰는 표식을 그대로 쓴다. 새 상징을 만들면 탭과 화면이 서로
+    다른 말을 한다.
+
+    바탕을 칠하는 이유: 브라우저 탭은 밝을 수도 어두울 수도 있는데 선만 남기면
+    한쪽에서 사라진다. 올리브 바탕(ground #383b34) 위의 라임(laser #cfe97c)은
+    양쪽에서 같은 무게로 보인다.
+  </desc>
+  <rect width="32" height="32" rx="7" fill="#383b34"/>
+  <g fill="none" stroke="#cfe97c" stroke-width="2.1" stroke-linecap="round">
+    <path d="M6 20.5C6 14.2 10.5 9.2 16 9.2S26 14.2 26 20.5"/>
+    <path d="M10.4 20.5c0-3.9 2.5-7 5.6-7s5.6 3.1 5.6 7"/>
+    <path d="M16 20.5v-2.9"/>
+  </g>
+  <circle cx="16" cy="23.4" r="1.9" fill="#cfe97c"/>
+</svg>

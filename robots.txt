@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://bellx3.github.io/sitemap.xml
