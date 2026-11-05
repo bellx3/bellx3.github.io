@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용약관 - Pixel Oasis</title>
+    <!--
+      ★ 본문은 Pixel Oasis 앱의 public/terms-of-service.html 그대로다(최종 수정일 포함).
+        바꾼 것은 두 가지뿐이다 — 개인정보처리방침(../pixeloasis-privacy/)과 같은 처리.
+        1) 구글 폰트 <link> 를 걷어내고 시스템 글꼴을 쓴다. 약관을 여는 것만으로
+           구글에 방문 기록이 가지 않게.
+        2) 앱으로 돌아가는 «홈으로» 링크를 뺐다. 웹에서는 돌아갈 앱 화면이 없다.
+    -->
+
+    <style>
+        :root {
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo',
+                'Malgun Gothic', system-ui, sans-serif;
+            --font-serif: Georgia, 'Times New Roman', 'Apple SD Gothic Neo', 'Nanum Myeongjo',
+                serif;
+            --text-main: #292524;
+            --text-muted: #78716c;
+            --bg-color: #fafaf9;
+            --accent-color: #000;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e7e5e4;
+            padding-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+            color: #44403c;
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* Header / Nav */
+        .header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid #e7e5e4;
+            padding: 8px 16px;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background-color: #fff;
+            border-color: #d6d3d1;
+            color: var(--text-main);
+        }
+
+        .updated {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-style: italic;
+            font-family: var(--font-serif);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e7e5e4;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #d6d3d1;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text-main);
+        }
+
+        /* 언어 전환용. hidden만으로는 위쪽 display 규칙에 질 수 있어 못 박는다 */
+        [hidden] {
+            display: none !important;
+        }
+
+        .lang-switch {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            background: none;
+            border: none;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="lang-toggle" class="lang-switch" type="button"></button>
+            <h1 data-lang="ko">이용약관</h1>
+            <h1 data-lang="en">Terms of Service</h1>
+            <p class="updated" data-lang="ko">최종 수정일: 2026. 8. 3</p>
+            <p class="updated" data-lang="en">Last updated: August 3, 2026</p>
+        </div>
+
+        <section data-lang="ko">
+            <h2>1. 서비스 이용 동의</h2>
+            <p>Pixel Oasis(이하 "앱")를 설치하고 사용함으로써, 귀하는 본 이용약관에 동의하게 됩니다. 본 앱은 무료로 제공되며, 사용자는 다음 사항을 준수해야 합니다:</p>
+            <ul>
+                <li>앱을 합법적이고 건전한 목적으로만 사용합니다.</li>
+                <li>타인의 지식재산권이나 권리를 침해하지 않습니다.</li>
+                <li>불법적이거나 유해한 콘텐츠를 생성하거나 업로드하지 않습니다.</li>
+            </ul>
+
+            <h2>2. 사용자 콘텐츠 및 권리</h2>
+            <ul>
+                <li>사용자가 앱 내에서 생성하거나 업로드한 이미지(이하 "사용자 콘텐츠")에 대한 권리는 전적으로 사용자에게 있습니다.</li>
+                <li>앱은 사용자 콘텐츠를 별도의 서버에 저장하지 않으며, 모든 콘텐츠는 사용자 기기의 로컬 저장소에만 보관됩니다.</li>
+                <li>타인의 저작물이 포함된 이미지를 사용하여 발생하는 법적 책임은 전적으로 사용자 본인에게 있습니다.</li>
+            </ul>
+
+            <h2>3. 서비스의 제공 및 자산</h2>
+            <p>앱에서 제공하는 기본 픽셀 아트 샘플 및 배경음악 등의 자산은 개발자가 직접 제작하거나 생성형 AI 기술을 활용하여 제작되었으며, 이에 대한 저작권은 개발자에게 있습니다. 사용자는 이를 앱
+                내에서의 개인적 이용 목적으로만 사용할 수 있습니다.</p>
+            <p><strong>명화 컬렉션은 예외입니다.</strong> '05. 명화'의 그림은 시카고 미술관과 뉴욕
+                메트로폴리탄 미술관이 <strong>퍼블릭 도메인(CC0)</strong>으로 공개한 작품이며,
+                개발자가 권리를 주장하지 않습니다. 각 그림의 작가·제작연도·소장처는 앱의 '원작 보기'에
+                표시됩니다.</p>
+
+            <h2>4. 광고 및 인앱 구매</h2>
+            <ul>
+                <li>본 앱의 무료 버전에는 Google AdMob을 통한 광고가 포함되어 있습니다.</li>
+                <li>사용자는 후원(인앱 구매, 상품 ID <code>remove_ads</code>)을 통해 광고를 제거하고
+                    자동 채우기를 더 넉넉하게 쓸 수 있습니다. 앱 안에서는 '커피 한 잔 사주기'로
+                    안내됩니다.</li>
+                <li><strong>보상형 광고</strong>: 자동 채우기를 다 쓴 뒤, 원하시면 짧은 광고를 끝까지
+                    보고 1회를 더 받을 수 있습니다. 선택 사항이며 보지 않아도 색칠은 이어집니다.</li>
+            </ul>
+
+            <h2>5. 결제 및 환불</h2>
+            <ul>
+                <li>모든 인앱 결제는 Google Play Store의 결제 시스템을 통해 이루어지며, 스토어의 정책을 따릅니다.</li>
+                <li>이미 사용된 디지털 콘텐츠(광고 제거 효력 발생 등)의 특성상 원칙적으로 환불이 제한될 수 있으며, 환불 요청은 Google Play Store의 절차에 따라 진행됩니다.</li>
+            </ul>
+
+            <h2>6. 서비스의 변경 및 중단</h2>
+            <p>개발자는 더 나은 서비스를 위해 언제든지 앱의 기능을 업데이트, 수정 또는 제거할 수 있습니다. 또한, 운영상의 이유로 사전 고지 없이 서비스 제공이 일시 중단되거나 종료될 수 있습니다.
+                단, 이 경우 가능한 한 사전에 공지하기 위해 노력합니다.</p>
+
+            <h2>7. 면책 조항</h2>
+            <ul>
+                <li>본 앱은 "있는 그대로(As Is)" 제공되며, 특정 목적에의 적합성이나 무결성을 보증하지 않습니다.</li>
+                <li>개발자는 사용자의 앱 사용 중 발생한 데이터 손실(기기 변경, 앱 삭제 등)이나 서비스 이용으로 인한 손해에 대해 책임을 지지 않습니다.</li>
+                <li>중요한 작품 데이터는 사용자가 별도로 관리할 것을 권장합니다.</li>
+            </ul>
+
+            <h2>8. 약관의 변경</h2>
+            <p>본 약관은 법률 변경이나 서비스 운영 필요에 따라 변경될 수 있으며, 변경 시 앱 내 공지사항을 통해 안내합니다.</p>
+
+            <div class="footer">
+                <p>서비스 이용 관련 문의</p>
+                <p>Contact: <a href="mailto:bellx3@hanmail.net">bellx3@hanmail.net</a></p>
+                <p>&copy; 2025 Pixel Oasis. All rights reserved.</p>
+            </div>
+        </section>
+
+        <section data-lang="en">
+            <h2>1. Agreement to These Terms</h2>
+            <p>By installing and using Pixel Oasis (the "app"), you agree to these terms. The app is
+                provided free of charge, and you agree to the following:</p>
+            <ul>
+                <li>Use the app only for lawful and reasonable purposes.</li>
+                <li>Do not infringe anyone else's intellectual property or other rights.</li>
+                <li>Do not create or upload unlawful or harmful content.</li>
+            </ul>
+
+            <h2>2. Your Content and Rights</h2>
+            <ul>
+                <li>You keep all rights to the images you create or upload in the app
+                    ("your content").</li>
+                <li>The app does not store your content on any server. Everything stays in your
+                    device's local storage.</li>
+                <li>You are solely responsible for any legal consequences of using images that
+                    contain someone else's copyrighted work.</li>
+            </ul>
+
+            <h2>3. Assets Provided by the App</h2>
+            <p>The sample pixel artwork, background music and other assets in the app were made by
+                the developer or created with the help of generative AI, and the developer holds the
+                copyright to them. You may use them only for personal use inside the app.</p>
+            <p><strong>The masterpiece collection is an exception.</strong> The works in
+                "05. Masterpieces" were released into the public domain (CC0) by the Art Institute of
+                Chicago and The Metropolitan Museum of Art, and the developer claims no rights over
+                them. Each work's artist, year and collection are shown under "Original" in the
+                app.</p>
+
+            <h2>4. Ads and In-App Purchases</h2>
+            <ul>
+                <li>The free version of this app includes ads served through Google AdMob.</li>
+                <li>You can remove ads and get more auto fills by supporting the app (in-app
+                    purchase, product ID <code>remove_ads</code>). In the app this is presented as
+                    "Buy me a coffee".</li>
+                <li><strong>Rewarded ads</strong>: once you have used every auto fill, you may choose
+                    to watch a short ad to the end for one more. It is optional and colouring
+                    continues either way.</li>
+            </ul>
+
+            <h2>5. Payment and Refunds</h2>
+            <ul>
+                <li>All in-app payments are processed by the Google Play Store and follow its
+                    policies.</li>
+                <li>Because digital content that has already been delivered (such as ads being
+                    removed) has been consumed, refunds may be limited. Refund requests follow the
+                    Google Play Store's process.</li>
+            </ul>
+
+            <h2>6. Changes to and Interruption of the Service</h2>
+            <p>The developer may update, change or remove features at any time to improve the
+                service. The service may also be suspended or discontinued without prior notice for
+                operational reasons, though we will try to announce it in advance where possible.</p>
+
+            <h2>7. Disclaimer</h2>
+            <ul>
+                <li>The app is provided "as is", without warranty of fitness for a particular purpose
+                    or of being free from defects.</li>
+                <li>The developer is not liable for data loss during use (for example when you change
+                    devices or uninstall the app) or for damages arising from use of the service.</li>
+                <li>We recommend keeping your own copy of artwork that matters to you.</li>
+            </ul>
+
+            <h2>8. Changes to These Terms</h2>
+            <p>These terms may change as the law or the service changes. We will announce any change
+                inside the app.</p>
+
+            <div class="footer">
+                <p>Questions about the service?</p>
+                <p>Contact: <a href="mailto:bellx3@hanmail.net">bellx3@hanmail.net</a></p>
+                <p>&copy; 2025 Pixel Oasis. All rights reserved.</p>
+            </div>
+        </section>
+    </div>
+
+    <!--
+        앱과 같은 언어를 따른다. 자세한 이유는 privacy-policy.html의 같은 자리에
+        적어 두었다 — 요약하면 두 언어 본문을 한 파일에 두어야 고칠 때 나란히
+        보이고, 한쪽만 고치는 사고가 안 난다.
+    -->
+    <script>
+        (function () {
+            var KEY = 'pixel_oasis_lang';
+            var TITLE = {
+                ko: '이용약관 - Pixel Oasis',
+                en: 'Terms of Service - Pixel Oasis',
+            };
+
+            function pick() {
+                try {
+                    var v = localStorage.getItem(KEY);
+                    if (v === 'ko' || v === 'en') return v;
+                } catch (e) {
+                    /* 사생활 보호 모드 등에서 막힐 수 있다 */
+                }
+                return (navigator.language || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+            }
+
+            var lang = pick();
+
+            function apply() {
+                document.documentElement.lang = lang;
+                document.title = TITLE[lang];
+                var nodes = document.querySelectorAll('[data-lang]');
+                for (var i = 0; i < nodes.length; i++) {
+                    nodes[i].hidden = nodes[i].getAttribute('data-lang') !== lang;
+                }
+                var btn = document.getElementById('lang-toggle');
+                if (btn) btn.textContent = lang === 'ko' ? 'English' : '한국어';
+            }
+
+            apply();
+            document.addEventListener('DOMContentLoaded', function () {
+                apply();
+                var btn = document.getElementById('lang-toggle');
+                if (!btn) return;
+                btn.addEventListener('click', function () {
+                    lang = lang === 'ko' ? 'en' : 'ko';
+                    try {
+                        localStorage.setItem(KEY, lang);
+                    } catch (e) {
+                        /* 못 적어도 이번 화면에는 적용된다 */
+                    }
+                    apply();
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
